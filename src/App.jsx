@@ -1,9 +1,12 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Destination from "./pages/Destination";
+
 export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Travel Planner App
-      </h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/destination/:id" element={<Destination />} />
+    </Routes>
   );
 }
