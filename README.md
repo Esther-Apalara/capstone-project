@@ -1,16 +1,63 @@
-# React + Vite
+Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Travel Planner App is a responsive React application that allows users to explore travel destinations, view details, and create a personal itinerary. The app focuses on clean UI, component reusability, routing, and state management using local data.
 
-Currently, two official plugins are available:
+This project was built as a capstone to demonstrate front-end development skills using modern React tools.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
 
-## React Compiler
+Browse a list of travel destinations
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Search destinations by city or country
 
-## Expanding the ESLint configuration
+View detailed information for each destination
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Display destination images
+
+Add attractions to a personal itinerary
+
+Persist itinerary data using localStorage
+
+Fully responsive design (mobile, tablet, desktop)
+
+🛠️ Technologies Used
+
+React (Vite)
+
+React Router DOM (client-side routing)
+
+Tailwind CSS (styling & responsiveness)
+
+JavaScript (ES6+)
+
+Local JSON data (no external APIs)
+
+📂 Project Structure
+src/
+ ├── components/
+ │   ├── Navbar.jsx
+ │   └── DestinationCard.jsx
+ ├── pages/
+ │   ├── Home.jsx
+ │   └── Destination.jsx
+ ├── data/
+ │   └── destinations.js
+ ├── App.jsx
+ ├── main.jsx
+ └── index.css
+
+🖼️ Images
+
+Destination images are displayed using static image URLs sourced from Unsplash. No image APIs or API keys are required.
+
+📱 Responsiveness
+
+The application is fully responsive and adapts to:
+
+Mobile screens
+
+Tablets
+
+Desktop displays
+
+This is achieved using Tailwind CSS utility classes and responsive grid layouts.
