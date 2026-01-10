@@ -1,32 +1,25 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function DestinationCard({ destination }) {
-  const navigate = useNavigate();
-
   return (
-    <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden max-w-xs w-full">
-      <img
-        src={destination.image || "https://via.placeholder.com/400x300?text=No+Image"}
-        alt={destination.name}
-        className="w-full h-40 object-cover"
-      />
-      
-      <div className="p-4">
-        <h2 className="text-lg font-semibold text-gray-800 mb-1">
-          {destination.name}
-        </h2>
+    <div className="bg-white p-4 rounded-lg shadow">
+      <h2 className="text-lg font-semibold">
+        {destination.city || destination.name}
+      </h2>
 
-        <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+      {destination.description && (
+        <p className="text-sm text-gray-600 mt-2">
           {destination.description}
         </p>
+      )}
 
-        <button
-          onClick={() => navigate(`/destination/${destination.id}`)}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-        >
-          View More
-        </button>
-      </div>
+      <Link
+        to={`/destination/${destination.id}`}
+        state={destination}
+        className="inline-block mt-4 text-blue-600 font-medium"
+      >
+        View More →
+      </Link>
     </div>
   );
 }
